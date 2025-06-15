@@ -5,6 +5,7 @@
 
 .page {
   min-width: 375px;
+
   @include mx.mq('lg') {
     display: grid;
     grid-template-columns: 248px 1fr;

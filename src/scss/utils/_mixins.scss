@@ -5,14 +5,14 @@
 @use 'functions' as fn;
 
 @mixin mq($bp: sm, $type: min, $is-retina: false) {
-  @if map.has-key(var.$breacpoints, $bp) {
-    $width: map.get(var.$breacpoints, $bp);
+  @if map.has-key(var.$breakpoints, $bp) {
+    $width: map.get(var.$breakpoints, $bp);
 
     @if $type == max {
-      $width: width - 0.02px;
+      $width: $width - 0.02px;
     }
 
-    @media only screen and (#{$type}-width:$width) {
+    @media only screen and (#{$type}-width: $width) {
       @if $is-retina {
         @media (min-device-pixel-ratio: 2),
           (min-resolution: 192dpi),
@@ -23,6 +23,8 @@
         @content;
       }
     }
+  } @else {
+    @error "";
   }
 }
 
@@ -51,7 +53,7 @@
     border-radius: 100px;
 
     &:hover {
-      background-color: rgba(#fff, 0, 3);
+      background-color: rgba(#fff, 0.3);
     }
   }
 
@@ -73,7 +75,7 @@
 
     transition: $ease;
   } @else {
-    @warn "The variable #{$ease} is not defined";
+    @warn "The variable $ease is not defined";
   }
 
   @if list.length($properties) > 0 {
