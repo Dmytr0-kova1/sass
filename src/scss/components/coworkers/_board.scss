@@ -1,0 +1,33 @@
+@use '../../utils/placeholders';
+@use '../../utils/variables' as var;
+@use '../../utils/functions' as fn;
+@use '../../utils/mixins' as mx;
+
+.board {
+  &-item {
+  }
+
+  &-left {
+  }
+}
+
+.board-caption {
+}
+.board-details {
+}
+.board-coworker {
+}
+
+.person {
+  &-thumb {
+  }
+  &-avatar {
+  }
+  &-caption {
+  }
+}
+
+.board-right {
+}
+.board-tag {
+}
