@@ -27,9 +27,6 @@
   &.hide {
     display: none;
   }
-
-  &-left {
-  }
 }
 
 .board-caption {
@@ -46,9 +43,6 @@
   color: fn.get-color('light-secondary');
 }
 
-.board-coworker {
-}
-
 .person {
   display: flex;
   align-items: center;
@@ -56,9 +50,6 @@
 
   &-thumb {
     @include mx.frame(24px, $is-circle: true);
-  }
-
-  &-avatar {
   }
 
   &-caption {
